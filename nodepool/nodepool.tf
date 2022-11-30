@@ -42,6 +42,7 @@ resource "google_container_node_pool" "cicd_nodes" {
   node_locations = ["asia-northeast3-a"]
 
   node_config {
+    preemptible  = true
     machine_type = "e2-medium"
 
     labels = {
